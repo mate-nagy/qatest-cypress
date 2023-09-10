@@ -1,6 +1,5 @@
 
 Cypress.Commands.add('openTransactionsScreen', () => {
-    cy.wait(3000)
     cy.contains('button', 'Transactions').click()
 })
 

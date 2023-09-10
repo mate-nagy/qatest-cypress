@@ -8,6 +8,7 @@ Cypress.Commands.add('deposit', (amount) => {
     cy.get('[ng-model="amount"]').type(amount)
     cy.get('[type="submit"]').click()
     cy.get('[ng-show="message"]').should('contain.text', 'Deposit Successful')
+    cy.wait(1000)
 })
 
 Cypress.Commands.add('verifyBalance', (expected) => {
